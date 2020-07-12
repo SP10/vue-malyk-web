@@ -1,0 +1,22 @@
+<template>
+  <div>
+    <v-system-bar color="amber darken-3" :height="height" :lightsOut="lightsOut" :window="window">
+      <v-spacer></v-spacer>
+      <v-icon small color="primary">mdi-phone</v-icon><span class="text-xs-overline text-sm-h6"><a class="white--text text-decoration-none" href="tel:+380967606922">+38 (096) 7606922</a></span>
+    </v-system-bar>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "fx-system-bar",
+  data: () => ({
+    height: 35,
+    lightsOut: false,
+    window: false
+  })
+};
+</script>
+
+<style scoped>
+</style>
