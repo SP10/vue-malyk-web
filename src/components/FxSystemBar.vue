@@ -9,12 +9,12 @@
 
 <script>
 export default {
-  name: "fx-system-bar",
+  name: 'fx-system-bar',
   data: () => ({
     height: 35,
     lightsOut: false,
-    window: false
-  })
+    window: false,
+  }),
 };
 </script>
 
