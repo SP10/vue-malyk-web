@@ -5,15 +5,15 @@
         <!-- <span class="ml-1 text-sm-subtitle-2 font-weight-light">Приєднуйтесь до нас</span> -->
         <v-spacer></v-spacer>
         <v-btn
-          v-for="icon in icons"
-          :href="icon.path"
-          :key="icon.key"
+          v-for="social in social_media"
+          :href="social.path"
+          :key="social.key"
           class="mx-4"
           color="primary"
           dark
           icon
         >
-          <v-icon size="24px">{{ icon.icon }}</v-icon>
+          <v-icon size="24px">{{ social.icon }}</v-icon>
         </v-btn>
       </v-card-title>
     </v-card>
@@ -24,7 +24,7 @@
 export default {
   name: "fx-footer",
   data: () => ({
-    icons: [
+    social_media: [
       {
         key: 0,
         icon: "mdi-facebook",
