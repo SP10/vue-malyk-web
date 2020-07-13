@@ -9,20 +9,20 @@
 
 <script>
 import FxSystemBar from '@/components/FxSystemBar';
-import FxHeader from "@/components/FxHeader";
-import FxFooter from "@/components/FxFooter";
+import FxHeader from '@/components/FxHeader';
+import FxFooter from '@/components/FxFooter';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
     FxSystemBar,
     FxHeader,
-    FxFooter
+    FxFooter,
   },
 
   data: () => ({
-  
-  })
+
+  }),
 };
 </script>
