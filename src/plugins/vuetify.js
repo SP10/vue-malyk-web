@@ -2,27 +2,27 @@ import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
 
 // Helpers
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors';
 
-Vue.use(Vuetify)
+Vue.use(Vuetify);
 const vuetify = new Vuetify({
-    theme: {
-        themes: {
-            light: {
-                primary: colors.amber.lighten3, // #E53935
-                secondary: colors.amber.lighten5, // #FFCDD2
-                accent: colors.indigo.base, // #3F51B5
-                info: colors.amber.lighten5
-            },
-            dark: {
-                primary: colors.red.darken4,
-                secondary: colors.blue.lighten4, // #FFCDD2
-                accent: colors.indigo.base // #3F51B5
-            },
-        }
+  theme: {
+    themes: {
+      light: {
+        primary: colors.amber.lighten3, // #E53935
+        secondary: colors.amber.lighten5, // #FFCDD2
+        accent: colors.indigo.base, // #3F51B5
+        info: colors.amber.lighten5,
+      },
+      dark: {
+        primary: colors.red.darken4,
+        secondary: colors.blue.lighten4, // #FFCDD2
+        accent: colors.indigo.base, // #3F51B5
+      },
+    },
 
-    }
+  },
 });
 
 // export default new Vuetify({});
-export default vuetify
+export default vuetify;
