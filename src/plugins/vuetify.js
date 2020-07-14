@@ -3,7 +3,9 @@ import Vuetify from 'vuetify/lib';
 
 // Helpers
 import colors from 'vuetify/es5/util/colors';
+import VueSimpleSVG from 'vue-simple-svg';
 
+Vue.use(VueSimpleSVG)
 Vue.use(Vuetify);
 const vuetify = new Vuetify({
   theme: {
