@@ -27,38 +27,33 @@
         </v-list-item-content>
       </v-list-item>
       <v-divider></v-divider>
-      <v-list>
+      <v-list dense>
         <v-list-item>
           <v-list-item-icon>
             <v-icon>mdi-home</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Головна</v-list-item-title>
         </v-list-item>
-        <v-list-group no-action prepend-icon="mdi-information-variant" value="true">
+        <v-list-group
+          v-for="item in items"
+          :key="item.title"
+          v-model="item.active"
+          :prepend-icon="item.action"
+          no-action
+        >
           <template v-slot:activator>
-            <v-list-item-title>Про нас</v-list-item-title>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.title"></v-list-item-title>
+            </v-list-item-content>
           </template>
-          <v-list-item v-for="(item, i) in about" :key="i" @click="1">
-            <v-list-item-title class="text-caption" v-text="item[0]"></v-list-item-title>
+
+          <v-list-item v-for="subItem in item.items" :key="subItem.title">
+            <v-list-item-content>
+              <v-list-item-title v-text="subItem.title"></v-list-item-title>
+            </v-list-item-content>
           </v-list-item>
         </v-list-group>
-        <v-list-group no-action prepend-icon="mdi-briefcase-variant" value="true">
-          <template v-slot:activator>
-            <v-list-item-title>Послуги</v-list-item-title>
-          </template>
-          <v-list-item v-for="(service, i) in services" :key="i" @click="1">
-            <v-list-item-title class="text-caption" v-text="service[0]"></v-list-item-title>
-          </v-list-item>
-        </v-list-group>
-        <v-list-group no-action prepend-icon="mdi-card-text" value="true">
-          <template v-slot:activator>
-            <v-list-item-title>Практики</v-list-item-title>
-          </template>
-          <v-list-item v-for="(proceeding, i) in proceedings" :key="i" @click="1">
-            <v-list-item-title class="text-caption" v-text="proceeding[0]"></v-list-item-title>
-          </v-list-item>
-        </v-list-group>
-        <v-list-item>
+         <v-list-item>
           <v-list-item-icon>
             <v-icon>mdi-newspaper-variant</v-icon>
           </v-list-item-icon>
@@ -84,22 +79,51 @@ export default {
   data: () => ({
     title: "Адвокатське бюро Малик і партнери",
     drawer: false,
-    about: [["Про бюро"], ["Команда"]],
-    services: [
-      ["Консультування"],
-      ["Представництво"],
-      ["Абонентське обслуговування"]
-    ],
-    proceedings: [
-      ["Цивільне право"],
-      ["Сімейне та спадкове право"],
-      ["Адміністративне право"],
-      ["Кримінальне право"],
-      ["Земельні питання"],
-      ["Трудові спори"],
-      ["Податкові питання"],
-      ["Відшкодування шкоди"]
-    ],
+    items: [
+      // {
+      //   action: "mdi-home",
+      //   title: "Головна",
+      //   items: []
+      // },
+      {
+        action: "mdi-incognito",
+        title: "Про нас",
+        items: [{ title: "Про бюро" }, { title: "Команда" }]
+      },
+      {
+        action: "mdi-briefcase-variant",
+        title: "Послуги",
+        items: [
+          { title: "Консультування" },
+          { title: "Представництво" },
+          { title: "Абонентське обслуговування" }
+        ]
+      },
+      {
+        action: "mdi-card-text",
+        title: "Практики",
+        items: [
+          { title: "Цивільне право" },
+          { title: "Сімейне та спадкове право" },
+          { title: "Адміністративне право" },
+          { title: "Кримінальне право" },
+          { title: "Земельні питання" },
+          { title: "Трудові спори" },
+          { title: "Податкові питання" },
+          { title: "Відшкодування шкоди" }
+        ]
+      },
+      // {
+      //   action: "mdi-newspaper-variant",
+      //   title: "Новини",
+      //   items: []
+      // },
+      // {
+      //   action: "mdi-card-account-phone",
+      //   title: "Контакти",
+      //   items: []
+      // }
+    ]
   })
 };
 </script>
