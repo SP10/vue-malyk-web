@@ -1,9 +1,9 @@
 <template>
   <div>
     <v-system-bar color="amber darken-3" :height="height" :lightsOut="lightsOut" :window="window">
-      <v-icon small color="primary" class="ml-2">mdi-map-marker</v-icon><span class="white--text mr-6 text text-xs-caption text-sm-h6 text-decoration-none">м. Вінниця, вул. Грушевського, 17</span>
+      <v-icon small color="primary" class="ml-xs-1 ml-sm-2">mdi-map-marker</v-icon><span class="white--text mr-xs-1 mr-sm-6  text text-xs-caption text-sm-subtitle-1 text-decoration-none">м. Вінниця, вул. Грушевського, 17</span>
       <v-spacer></v-spacer>
-      <v-icon small color="primary">mdi-phone</v-icon><span class="mr-6 text text-xs-overline text-sm-h6"><a class="white--text text-decoration-none" href="tel:+380967606922">+38 (096) 7606922</a></span>
+      <v-icon small color="primary">mdi-phone</v-icon><span class="mr-xs-1 mr-sm-6 text text-xs-overline text-sm-subtitle-1"><a class="white--text text-decoration-none" href="tel:+380967606922">+38 (096) 7606922</a></span>
     </v-system-bar>
   </div>
 </template>
