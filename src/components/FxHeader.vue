@@ -61,14 +61,18 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-icon>
-            <v-icon>mdi-card-account-phone</v-icon>
+            <v-icon>mdi-account-box</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Контакти</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-sheet id="scrolling-techniques-2" class="overflow-y-auto" max-height="600px">
-      <v-container style="height: 1000px;"></v-container>
+      <v-container class="mt-xs-125" style="height: 1000px;">
+          <v-row>
+            <v-col></v-col>
+          </v-row>
+      </v-container>
     </v-sheet>
   </v-card>
 </template>
