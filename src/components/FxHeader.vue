@@ -29,16 +29,15 @@
       <v-divider></v-divider>
       <v-list dense>
         <v-list-item>
-          <v-list-item-icon>
+          <!-- <v-list-item-icon>
             <v-icon>mdi-home</v-icon>
-          </v-list-item-icon>
+          </v-list-item-icon> -->
           <v-list-item-title>Головна</v-list-item-title>
         </v-list-item>
         <v-list-group
           v-for="item in items"
           :key="item.title"
           v-model="item.active"
-          :prepend-icon="item.action"
           no-action
         >
           <template v-slot:activator>
@@ -54,15 +53,15 @@
           </v-list-item>
         </v-list-group>
          <v-list-item>
-          <v-list-item-icon>
+          <!-- <v-list-item-icon>
             <v-icon>mdi-newspaper-variant</v-icon>
-          </v-list-item-icon>
+          </v-list-item-icon> -->
           <v-list-item-title>Новини</v-list-item-title>
         </v-list-item>
         <v-list-item>
-          <v-list-item-icon>
+          <!-- <v-list-item-icon>
             <v-icon>mdi-account-box</v-icon>
-          </v-list-item-icon>
+          </v-list-item-icon> -->
           <v-list-item-title>Контакти</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -81,7 +80,7 @@
 export default {
   name: "fx-header",
   data: () => ({
-    title: "Адвокатське бюро Малик і партнери",
+    title: `Адвокатське бюро "Малик і партнери"`,
     drawer: false,
     items: [
       // {
