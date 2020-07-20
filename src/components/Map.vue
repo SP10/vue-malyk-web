@@ -26,16 +26,27 @@ export default {
   data() {
     return {
       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      zoom: 16,
-      center: latLng(49.2570,28.3673),
+      zoom: 15,
+      center: latLng(49.257, 28.3673),
       bounds: null,
-      marker: [49.2569,28.3673]
+      marker: [49.2569, 28.3673],
+      mapSize: null,
+      barSize: null
     };
+  },
+  computed: {
+    onSizeMap() {
+      console.log(this.$refs.bar);
+      return null;
+    }
   },
   methods: {
     onResize() {
-      console.log( this.$refs);
       this.$refs.map.mapObject._onResize();
+      this.mapSize = this.$refs.map.mapObject._size;
+      this.barSize = this.$refs;
+    //   console.log("Map size: ", this.mapSize);
+      console.log("Bar size: ", this.barSize);
     }
   }
 };
