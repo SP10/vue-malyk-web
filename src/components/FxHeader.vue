@@ -1,6 +1,7 @@
 <template>
   <v-card class="overflow-hidden" outlined>
     <v-app-bar
+      ref="bar"
       absolute
       color="#fcb69f"
       dark
@@ -69,7 +70,7 @@
     <v-sheet id="scrolling-techniques-2" class="overflow-y-auto" max-height="600px">
       <v-container class="mt-xs-125" style="height: 1000px;">
           <v-row>
-            <v-col></v-col>
+            <v-col>Content</v-col>
           </v-row>
       </v-container>
     </v-sheet>
