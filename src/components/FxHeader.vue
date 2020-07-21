@@ -16,9 +16,9 @@
 
       <v-app-bar-nav-icon @click="drawer = true" color="primary"></v-app-bar-nav-icon>
 
-      <v-toolbar-title class="text-caption text-sm-h6" color="primary">{{ title }}</v-toolbar-title>
+      <v-toolbar-title class="text-body-2 text-sm-h6" color="primary">{{ title }}</v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" right="right" absolute width="305px" temporary>
+    <v-navigation-drawer v-model="drawer" right="right" absolute width="280px" temporary>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title"></v-list-item-title>
