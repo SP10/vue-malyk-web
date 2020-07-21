@@ -70,7 +70,7 @@
     <v-sheet id="scrolling-techniques-2" class="overflow-y-auto" max-height="600px">
       <v-container class="mt-xs-125" style="height: 1000px;">
           <v-row>
-            <v-col>Content</v-col>
+            <v-col><home/></v-col>
           </v-row>
       </v-container>
     </v-sheet>
@@ -78,8 +78,12 @@
 </template>
 
 <script>
+import Home from '@/components/Home';
 export default {
   name: "fx-header",
+  components:{
+    Home
+  },
   data: () => ({
     title: `Адвокатське бюро "Малик і партнери"`,
     drawer: false,
