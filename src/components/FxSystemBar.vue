@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-system-bar color="grey lighten-5" :height="height" :lightsOut="lightsOut" :window="window">
-      <v-btn @click="sheet = !sheet" text>
+      <!-- <v-btn @click="sheet = !sheet" text>
         <v-icon small color="primary" class="ml-xs-1 ml-sm-2">mdi-map-marker</v-icon>
         <span
           class="grey--text mr-xs-1 mr-sm-6  text text-xs-caption text-sm-subtitle-1 text-decoration-none"
         >Як нас знайти?</span>
-      </v-btn>
+      </v-btn> -->
 
       <v-spacer></v-spacer>
       <v-icon small color="primary">mdi-phone</v-icon>
