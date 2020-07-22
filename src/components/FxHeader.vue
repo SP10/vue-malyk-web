@@ -29,10 +29,7 @@
       </v-list-item>
       <v-divider></v-divider>
       <v-list dense>
-        <v-list-item>
-          <!-- <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-icon> -->
+        <v-list-item @click="$router.push('/home')">
           <v-list-item-title>Головна</v-list-item-title>
         </v-list-item>
         <v-list-group
@@ -47,30 +44,24 @@
             </v-list-item-content>
           </template>
 
-          <v-list-item v-for="subItem in item.items" :key="subItem.title">
+          <v-list-item v-for="subItem in item.items" :key="subItem.title" @click="$router.push(subItem.route)">
             <v-list-item-content>
               <v-list-item-title v-text="subItem.title"></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-group>
          <v-list-item>
-          <!-- <v-list-item-icon>
-            <v-icon>mdi-newspaper-variant</v-icon>
-          </v-list-item-icon> -->
           <v-list-item-title>Новини</v-list-item-title>
         </v-list-item>
         <v-list-item>
-          <!-- <v-list-item-icon>
-            <v-icon>mdi-account-box</v-icon>
-          </v-list-item-icon> -->
           <v-list-item-title>Контакти</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-sheet id="scrolling-techniques-2" class="overflow-y-auto" max-height="600px">
-      <v-container class="mt-xs-125" style="height: 1000px;">
+      <v-container class="mt-xs-125 m-125" style="height: 1000px;">
           <v-row>
-            <v-col><home/></v-col>
+            <v-col><router-view /></v-col>
           </v-row>
       </v-container>
     </v-sheet>
@@ -78,11 +69,11 @@
 </template>
 
 <script>
-import Home from '@/components/Home';
+// import Home from '@/components/Home';
 export default {
   name: "fx-header",
   components:{
-    Home
+    // Home
   },
   data: () => ({
     title: `Адвокатське бюро "Малик і партнери"`,
@@ -96,29 +87,29 @@ export default {
       {
         action: "mdi-incognito",
         title: "Про нас",
-        items: [{ title: "Про бюро" }, { title: "Команда" }]
+        items: [{ title: "Про бюро", route:'/about' }, { title: "Команда",route:'/team' }]
       },
       {
         action: "mdi-briefcase-variant",
         title: "Послуги",
         items: [
-          { title: "Консультування" },
-          { title: "Представництво" },
-          { title: "Абонентське обслуговування" }
+          { title: "Консультування", route:'' },
+          { title: "Представництво", route:'' },
+          { title: "Абонентське обслуговування", route:'' }
         ]
       },
       {
         action: "mdi-card-text",
         title: "Практики",
         items: [
-          { title: "Цивільне право" },
-          { title: "Сімейне та спадкове право" },
-          { title: "Адміністративне право" },
-          { title: "Кримінальне право" },
-          { title: "Земельні питання" },
-          { title: "Трудові спори" },
-          { title: "Податкові питання" },
-          { title: "Відшкодування шкоди" }
+          { title: "Цивільне право", route:'' },
+          { title: "Сімейне та спадкове право", route:'' },
+          { title: "Адміністративне право", route:'' },
+          { title: "Кримінальне право", route:'' },
+          { title: "Земельні питання", route:'' },
+          { title: "Трудові спори", route:'' },
+          { title: "Податкові питання", route:'' },
+          { title: "Відшкодування шкоди", route:'' }
         ]
       },
       // {
@@ -139,5 +130,8 @@ export default {
 <style>
 .item--text {
   color: #ffe082;
+}
+.m-125{
+  margin-top: 125px;
 }
 </style>
