@@ -3,7 +3,7 @@
     <fx-system-bar/>
     <fx-header/>
     <fx-footer/>
-    <router-view />
+    <!-- <router-view /> -->
   </v-app>
 </template>
 
